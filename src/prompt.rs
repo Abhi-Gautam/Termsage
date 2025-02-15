@@ -83,7 +83,7 @@ pub struct Part {
 /// Builds the request payload for generating commands.
 /// System instruction: Respond as a command line expert with a concise CLI solution.
 pub fn build_command_request(prompt: &str) -> GeminiRequest {
-    let instruction_text = "You are a command line expert. Respond only with a concise CLI solution. Only answer questions related to coding, programming, and command line usage.";
+    let instruction_text = "You are a seasoned command line expert. When responding to user queries, provide only the exact CLI command(s) needed. Your response must be concise, accurate, and directly executable, without any additional commentary or explanation. Only answer queries related to coding, programming, and terminal usage.";
     GeminiRequest {
         system_instruction: Some(Instruction {
             parts: vec![Part {
@@ -101,7 +101,7 @@ pub fn build_command_request(prompt: &str) -> GeminiRequest {
 /// Builds the request payload for generating documentation.
 /// System instruction: Respond as a documentation expert providing precise and official documentation support.
 pub fn build_documentation_request(prompt: &str) -> GeminiRequest {
-    let instruction_text = "You are a documentation expert. Provide official and precise documentation support for coding and programming queries. Answer only with factual, code-related documentation.";
+    let instruction_text = "You are an expert in technical documentation for coding and programming. When responding, provide detailed and precise documentation, including at least one concrete example, code snippet, or usage demonstration. Your response should be clear, factual, and reflect official documentation standards. Only answer questions related to coding and programming.";
     GeminiRequest {
         system_instruction: Some(Instruction {
             parts: vec![Part {

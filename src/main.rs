@@ -1,5 +1,3 @@
-
-
 mod prompt;
 mod subcommands;
 
@@ -34,9 +32,8 @@ async fn main() {
 
     match &cli.command {
         Commands::Cmd { prompt } => {
-            match subcommands::command::generate_command(prompt).await {
-                Ok(result) => println!("{}", result),
-                Err(e) => eprintln!("Error generating command: {}", e),
+            if let Err(e) = subcommands::command::generate_command(prompt).await {
+                println!("Error generating command: {}", e);
             }
         }
         Commands::Doc { prompt } => {
