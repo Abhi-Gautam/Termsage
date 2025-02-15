@@ -1,6 +1,6 @@
 # TermSage
 
-TermSage is a Rust-based CLI tool that leverages Google's Gemini generative language API to provide terminal commands and documentation help directly in your terminal. Whether you need to generate a Git command or quickly look up a code snippet, TermSage is here to assist.
+TermSage is a Rust-based CLI tool that leverages Google's Gemini generative language API to provide commands and documentation help directly in your terminal. Whether you need to generate a Git command or quickly look up a code snippet.
 
 ## Features
 
